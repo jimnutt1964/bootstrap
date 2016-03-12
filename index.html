@@ -19,9 +19,23 @@
 				</div>
 
 				<ul class='nav navbar-nav navbar-right collapse navbar-collapse'>
-					<li><a href='/'>Home</a></li>
 					<li><a href='tickets.html'>Tickets</a></li>
 					<li><a href='stations.html'>Stations</a></li>
+					<li>
+						<a href='about.html' data-target='#' data-toggle='dropdown'>
+						About <span class='caret'></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href='story.html'>Our Story</a></li>
+							<li><a href='contact.html'>Contact Us</a></li>
+							<li class='divider'/>
+							<li><a href='/blog'>Blog</a></li>
+							<li class='divider'/>
+							<li><a href='http://twitter.com/codeschool'>Twitter</a></li>
+							<li><a href='http://facebook.com/codeschool'>Facebook</a></li>				
+						</ul>
+					</li>
+
 				</ul>				
 			</div>
 		</div>
@@ -91,6 +105,82 @@
 				</div>
 			</div>
         </div>
+		<div class='container'>
+			<div class='row'>
+				<div class='col-md-8'>
+				<h2>Plan Your Trip Today!</h2>
+				<ul class='nav nav-tabs'>
+					<li class='active'><a href='#time'>Todays Times</a></li>
+					<li><a href='#deals'>Hot Deals</a></li>
+					<li><a href='#forecast'>Forecast</a></li>
+				</ul>
+					<div class='tab-content'>
+						<div class='tab-pane fade active in' id='time'>
+							<p>Todays Time here</p>
+						</div>
+						<div class='tab-pane fade' id='deals'>
+							<p>Deals here</p>
+						</div>
+						<div class='tab-pane fade' id='forecast'>
+							<p>Forecast</p>
+						</div>
+					</div>
+				</div>
+				<div class='col-md-3 col-md-offset-1'>
+					<div class='panel-group'>
+						<div class='panel panel-success'>
+							<div class='panel-heading'>
+							<h4 class='panel-title'>
+							<a href='#systemsOperational' data-toggle='collapse' data-parent='.panel-group'>All Systems Operational</a>
+							</h4>
+							</div>
+							<div id='systemsOperational' class='panel-collapse collapse in'>
+								<div class='panel-body'>
+								<p>All systems are operational</p>
+								<ul class='list-unstyled'>
+								<li><i class='glyphicon glyphicon-ok'></i>  Transporters</li>
+								<li><i class='glyphicon glyphicon-ok'></i>  Space Elevator</li>
+								<li><i class='glyphicon glyphicon-ok'></i>  RocketBus</li>
+								</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class='panel panel-warning'>
+							<div class='panel-heading'>
+							<h4 class='panel-title'>
+							<a href='#weatherAlert' data-toggle='collapse' data-parent='.panel-group'>Weather Alert</a>
+							</h4>
+							</div>
+							<div id='weatherAlert' class='panel-collapse collapse'>
+								<div class='panel-body'>
+								<p>The National Weather Service has issued a solar flare watch for the following time periods. Please plan accordingly:</p>
+								<ul class='list-unstyled'>
+								<li><strong>February 9th, 21:43</strong></li>
+								<li><strong>May 18, 19:82</strong></li>
+								<li><strong>July 4, 08:42</strong></li>
+								</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class='panel panel-danger'>
+							<div class='panel-heading'>
+							<h4 class='panel-title'>
+							<a href='#transportationWarning' data-toggle='collapse' data-parent='.panel-group'>Transportation Generals Warning: Transporters</a>
+							</h4>
+							</div>
+							<div id='transportationWarning' class='panel-collapse collapse'>
+								<div class='panel-body'>
+								<p>Technically, transporting means making a clone of yourself and killing off the other one. If you believe in a soul, you should be aware of this fact before attempting travel using a transporter.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<div class='footer'>
       		<div class='container'>
         		<div class='row'>
@@ -130,9 +220,16 @@
 				</div>
 			</div>
 		</div>
-
 		<script src="http://code.jquery.com/jquery-2.2.1.js"   integrity="sha256-eNcUzO3jsv0XlJLveFEkbB8bA7/CroNpNVk3XpmnwHc="   crossorigin="anonymous"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		<script>
+			$(function() {
+			$('.nav-tabs a').click(function (e) {
+				e.preventDefault();
+				$(this).tab('show');
+				});
+			});
+		</script>
 
 	</body>
 </html>
